@@ -501,3 +501,57 @@ README.md  edu.txt  edu2.txt  edu3.txt  edu4.txt  git-day1.txt
 pavan@LAPTOP-J6SI96OK MINGW64 /c/Git/demo (main)
 $ git checkout firstbranch
 Switched to branch 'firstbranch'
+pavan@LAPTOP-J6SI96OK MINGW64 /c/Git/demo (firstbranch)
+$ vi edu5.txt
+
+pavan@LAPTOP-J6SI96OK MINGW64 /c/Git/demo (firstbranch)
+$ ls
+README.md  edu.txt  edu2.txt  edu3.txt  edu4.txt  edu5.txt  git-day1.txt
+
+pavan@LAPTOP-J6SI96OK MINGW64 /c/Git/demo (firstbranch)
+$ vi edu6.txt
+
+pavan@LAPTOP-J6SI96OK MINGW64 /c/Git/demo (firstbranch)
+$ git add -A
+warning: LF will be replaced by CRLF in edu5.txt.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in edu6.txt.
+The file will have its original line endings in your working directory
+
+pavan@LAPTOP-J6SI96OK MINGW64 /c/Git/demo (firstbranch)
+$ git commit -a -m "adding for rebasing"
+[firstbranch 1bed885] adding for rebasing
+ 2 files changed, 2 insertions(+)
+ create mode 100644 edu5.txt
+ create mode 100644 edu6.txt
+
+pavan@LAPTOP-J6SI96OK MINGW64 /c/Git/demo (firstbranch)
+$ git rebase master
+fatal: invalid upstream 'master'
+
+pavan@LAPTOP-J6SI96OK MINGW64 /c/Git/demo (firstbranch)
+$ git rebase main
+Current branch firstbranch is up to date.
+
+pavan@LAPTOP-J6SI96OK MINGW64 /c/Git/demo (firstbranch)
+$ ls
+README.md  edu.txt  edu2.txt  edu3.txt  edu4.txt  edu5.txt  edu6.txt  git-day1.txt
+
+pavan@LAPTOP-J6SI96OK MINGW64 /c/Git/demo (firstbranch)
+$ git checkout main
+Switched to branch 'main'
+
+pavan@LAPTOP-J6SI96OK MINGW64 /c/Git/demo (main)
+$ ls
+README.md  edu.txt  edu2.txt  edu3.txt  edu4.txt  git-day1.txt
+
+pavan@LAPTOP-J6SI96OK MINGW64 /c/Git/demo (main)
+$ git rebase firstbranch
+Successfully rebased and updated refs/heads/main.
+
+pavan@LAPTOP-J6SI96OK MINGW64 /c/Git/demo (main)
+$ ls
+README.md  edu.txt  edu2.txt  edu3.txt  edu4.txt  edu5.txt  edu6.txt  git-day1.txt
+
+pavan@LAPTOP-J6SI96OK MINGW64 /c/Git/demo (main)
+$
