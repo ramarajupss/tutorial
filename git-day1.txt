@@ -424,3 +424,80 @@ Date:   Sun May 22 18:02:05 2022 +0530
 
 pavan@LAPTOP-J6SI96OK MINGW64 /c/Git/demo (main)
 $
+pavan@LAPTOP-J6SI96OK MINGW64 /c/Git/demo (main)
+$ git branch firstbranch
+
+pavan@LAPTOP-J6SI96OK MINGW64 /c/Git/demo (main)
+$ git checkout firstbranch
+Switched to branch 'firstbranch'
+
+pavan@LAPTOP-J6SI96OK MINGW64 /c/Git/demo (firstbranch)
+$ git add edu4.txt
+
+pavan@LAPTOP-J6SI96OK MINGW64 /c/Git/demo (firstbranch)
+$ git commit -m "making changes in firstbranch"
+[firstbranch 4b47d25] making changes in firstbranch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 edu4.txt
+
+pavan@LAPTOP-J6SI96OK MINGW64 /c/Git/demo (firstbranch)
+$ ls
+README.md  edu.txt  edu2.txt  edu3.txt  edu4.txt  git-day1.txt
+
+pavan@LAPTOP-J6SI96OK MINGW64 /c/Git/demo (firstbranch)
+$ git checkout master
+error: pathspec 'master' did not match any file(s) known to git
+
+pavan@LAPTOP-J6SI96OK MINGW64 /c/Git/demo (firstbranch)
+$ git checkout main
+Switched to branch 'main'
+
+pavan@LAPTOP-J6SI96OK MINGW64 /c/Git/demo (main)
+$ ls
+README.md  edu.txt  edu2.txt  edu3.txt  git-day1.txt
+
+pavan@LAPTOP-J6SI96OK MINGW64 /c/Git/demo (main)
+$ git branch
+  firstbranch
+* main
+
+pavan@LAPTOP-J6SI96OK MINGW64 /c/Git/demo (main)
+$ ls
+README.md  edu.txt  edu2.txt  edu3.txt  git-day1.txt
+
+pavan@LAPTOP-J6SI96OK MINGW64 /c/Git/demo (main)
+$
+
+pavan@LAPTOP-J6SI96OK MINGW64 /c/Git/demo (main)
+$
+
+
+
+
+pavan@LAPTOP-J6SI96OK MINGW64 /c/Git/demo (main)
+$
+
+pavan@LAPTOP-J6SI96OK MINGW64 /c/Git/demo (main)
+$
+
+pavan@LAPTOP-J6SI96OK MINGW64 /c/Git/demo (main)
+$
+
+pavan@LAPTOP-J6SI96OK MINGW64 /c/Git/demo (main)
+$
+
+pavan@LAPTOP-J6SI96OK MINGW64 /c/Git/demo (main)
+$ git merge firstbranch
+Updating c6dc354..4b47d25
+Fast-forward
+ edu4.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 edu4.txt
+
+pavan@LAPTOP-J6SI96OK MINGW64 /c/Git/demo (main)
+$ ls
+README.md  edu.txt  edu2.txt  edu3.txt  edu4.txt  git-day1.txt
+
+pavan@LAPTOP-J6SI96OK MINGW64 /c/Git/demo (main)
+$ git checkout firstbranch
+Switched to branch 'firstbranch'
